@@ -1,8 +1,9 @@
-require 'rails-helper'
+require 'rails_helper'
 
-Rspec.describe 'Hello world', type: :feature do
+RSpec.describe 'Hello world', type: :feature do
   scenario 'index page' do
     visit hello_world_index_path
-    expect(page).to have_content('Hello, world!')
+    sleep(5)
+    expect(page).to have_content('Hello world!')
   end
 end
